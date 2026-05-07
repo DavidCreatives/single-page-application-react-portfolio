@@ -4,11 +4,11 @@ import './index.css'
 import App from './Heading.jsx'
 import Form from './Form.jsx'
 import DisplayProjects from './ProjectDisplay.jsx'
+import ParentApp from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
-    <Form />
-    <DisplayProjects/>
-  </StrictMode>,
+    <App/>
+    <ParentApp/>
+  </StrictMode>
 )
