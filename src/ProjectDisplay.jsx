@@ -4,7 +4,9 @@ import { DataContext } from "./App";
 
 function DisplayProjects(receivedData){
     const { data } = useContext(DataContext)
-    console.log(data)
+    
+    const projectList = Array.isArray(data) ? data : [];
+    console.log(projectList)
 
     return(
         <div className="m-10 border-1 rounded-xl">
@@ -17,7 +19,9 @@ function DisplayProjects(receivedData){
                 />
             </div>
                 <ul>
-                    {<li key={data}>{data.title}</li>}
+                    {projectList.map((item, index) => (
+                    <li key={index}>{item.name || JSON.stringify(item)}</li>
+                    ))}
                 </ul>
             <div>
 

@@ -7,15 +7,12 @@ function Form(){
 
     const { setData } = useContext(DataContext)
 
-    const projectsList = []
-
     function handleSubmit(){
         let projectArray = {
             title: projectName,
             description: projectDescription
         }
-
-        projectsList.push(projectArray)
+        
         setData(projectArray)
     }
     return(
