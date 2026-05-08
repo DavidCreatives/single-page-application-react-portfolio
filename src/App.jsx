@@ -3,7 +3,7 @@ import Form from "./Form";
 import App from "./Heading";
 import DisplayProjects from "./ProjectDisplay";
 
-export const DataContext = createContext([])
+export const DataContext = createContext()
 
 function ParentApp(){
     const[data, setData] = useState('')
