@@ -5,8 +5,8 @@ import { DataContext } from "./App";
 function DisplayProjects(receivedData){
     const { data } = useContext(DataContext)
     
-    const projectList = Array.isArray(data) ? data : [];
-    console.log(projectList)
+    localStorage.setItem(data)
+    
 
     return(
         <div className="m-10 border-1 rounded-xl">
